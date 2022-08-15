@@ -5,7 +5,7 @@ var validacion = true;
 
 function validar() {
     var texto = entrada.value;
-    let letrasValidas = "abcdefghijklmnñopqrstuvwxyz¿?¡!. ";
+    let letrasValidas = "abcdefghijklmnñopqrstuvwxyz¿?¡!.,()-:; ";
 
     for (let letra of texto) {
         if (!letrasValidas.includes(letra)) {
