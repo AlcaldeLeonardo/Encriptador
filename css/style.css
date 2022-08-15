@@ -112,6 +112,28 @@ body {
   font-size: 24px;
   line-height: 36px;
 }
+
+.contacto {
+  background: linear-gradient(180deg, #0000, #0005);
+  text-align: center;
+}
+.contacto__firma {
+  font-size: 16px;
+}
+
+.contacto__redes {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0.5em 1em;
+}
+
+.contacto__redes--linkedin {
+  width: 50px;
+}
+
+.contacto__redes--github {
+  width: 55px;;
+}
 @media only screen and (min-width: 600px) {
   
 }
