@@ -20,7 +20,8 @@ body {
   margin: auto;
 }
 
-.encriptacion__entrada, .encriptacion__entrada::placeholder {
+.encriptacion__entrada,
+.encriptacion__entrada::placeholder {
   color: #0a3871;
   font-size: 32px;
 }
@@ -68,7 +69,7 @@ body {
   background: #082c58;
 }
 
-.boton:active{
+.boton:active {
   transform: scale(0.95);
 }
 
@@ -125,7 +126,6 @@ body {
   display: inline-block;
   vertical-align: middle;
   margin: 1.5em 1em 3em;
-
 }
 
 .contacto__redes--linkedin {
@@ -133,12 +133,10 @@ body {
 }
 
 .contacto__redes--github {
-  width: 55px;;
+  width: 55px;
 }
 @media only screen and (min-width: 600px) {
-  
 }
 
 @media only screen and (min-width: 800px) {
-  
 }

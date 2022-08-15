@@ -47,6 +47,8 @@ function desencriptar() {
         .replaceAll("ai", "a")
         .replaceAll("ufat", "u");
     salida.value = mensajeEncriptado;
+    salida.style.display = "inline-block";
+    muestra.style.display = "none";
 }
 
 function copyToClipBoard() {
