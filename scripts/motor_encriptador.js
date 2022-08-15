@@ -2,6 +2,7 @@ var entrada = document.querySelector("#entrada");
 var salida = document.querySelector("#salida");
 var muestra = document.querySelector("#muestra");
 var validacion = true;
+var botonCopiar = document.querySelector("#botonCopiar")
 
 function validar() {
     var texto = entrada.value;
@@ -35,6 +36,7 @@ function encriptar() {
     salida.value = mensajeEncriptado;
     salida.style.display = "inline-block";
     muestra.style.display = "none";
+    botonCopiar.style.display = "block" 
 }
 
 function desencriptar() {
@@ -49,6 +51,7 @@ function desencriptar() {
     salida.value = mensajeEncriptado;
     salida.style.display = "inline-block";
     muestra.style.display = "none";
+    botonCopiar.style.display = "block" 
 }
 
 function copyToClipBoard() {

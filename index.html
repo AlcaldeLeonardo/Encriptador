@@ -11,19 +11,20 @@
       href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
       rel="stylesheet"
     />
+    <!---->
     <link rel="stylesheet" href="css/normalize.css" />
     <link rel="stylesheet" href="css/style.css" />
     <title>Encriptador</title>
   </head>
   <body>
-    <header class="header">
-      <h1 class="header__logo">
-        <img src="img/Vectorlogo.png" alt="logo del encriptador" />
-      </h1>
-    </header>
-
     <main>
+      
       <div class="encriptacion">
+        <div class="header">
+          <h1 class="header__logo">
+            <img src="img/Vectorlogo.png" alt="logo del encriptador" />
+          </h1>
+        </div>
         <form action="#">
           <textarea
             class="encriptacion__entrada"
@@ -57,6 +58,7 @@
       </div>
       <div class="resultado">
         <div class="nohaymensaje" id="muestra">
+          <img class="nohaymensaje__imagen" src="img/muñeco.png" alt="">
           <p class="resultado__subtitulo" id="subtituloResultado">
             Ningun mensaje fue encontrado
           </p>
@@ -64,23 +66,24 @@
             Ingrese el texto que desea encriptar o desencriptar
           </p>
         </div>
-
-        <textarea
+        <form action="#">
+          <textarea
           readonly="readonly"
           class="resultado__salida"
           name=""
           id="salida"
         ></textarea>
-
+          <p></p>
         <input
           onclick="copyToClipBoard()"
-          class="boton boton--sin-fondo"
+          id="botonCopiar"
+          class="boton boton--sin-fondo copiar"
           type="button"
-          value="Copiar"
-        />
+          value="Copiar">
+        </form>
       </div>
+      <script src="scripts/motor_encriptador.js"></script>
     </main>
-
     <footer class="contacto">
       <p class="contacto__firma">Leonardo Esteban Alcalde Gómez</p>
       <p class="contacto__redes">
@@ -102,7 +105,5 @@
         /></a>
       </p>
     </footer>
-
-    <script src="scripts/motor_encriptador.js"></script>
   </body>
 </html>
