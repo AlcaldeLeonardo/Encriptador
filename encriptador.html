@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Encriptador</title>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header__logo">
+        <img src="img/Vectorlogo.png" alt="logo del encriptador" />
+      </h1>
+    </header>
+
+    <main>
+      <div class="encriptacion">
+        <form action="#">
+          <textarea
+            class="encriptacion__entrada"
+            name=""
+            id="entrada"
+            placeholder="Ingrese el texto aquí"
+          ></textarea>
+
+          <img
+            class="encriptacion__exclamacion"
+            src="img/Vectorexclamacion.png"
+            alt="exclamacion"
+          />
+          <p class="encriptacion__advertencia">
+            Solo letras minusculas y sin acento
+          </p>
+
+          <input
+            onclick="encriptar()"
+            class="boton"
+            type="button"
+            value="Encriptar"
+          />
+          <input
+            onclick="desencriptar()"
+            class="boton boton--sin-fondo"
+            type="button"
+            value="Desencriptar"
+          />
+        </form>
+      </div>
+      <div class="resultado">
+
+        <div class="nohaymensaje" id="muestra">
+          <p class="resultado__subtitulo" id="subtituloResultado">
+            Ningun mensaje fue encontrado
+          </p>
+          <p class="resultado__parrafo" id="parrafoResultado">
+            Ingrese el texto que desea encriptar o desencriptar
+          </p>
+        </div>
+
+        <textarea readonly ="readonly" class="resultado__salida" name="" id="salida"></textarea>
+
+        <input
+          onclick="copyToClipBoard()"
+          class="boton boton--sin-fondo"
+          type="button"
+          value="copiar"
+        />
+      </div>
+    </main>
+
+    <footer></footer>
+
+    <script src="scripts/motor.js"></script>
+  </body>
+</html>
