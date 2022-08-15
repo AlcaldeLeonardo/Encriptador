@@ -124,7 +124,8 @@ body {
 .contacto__redes {
   display: inline-block;
   vertical-align: middle;
-  margin: 0.5em 1em;
+  margin: 1.5em 1em 3em;
+
 }
 
 .contacto__redes--linkedin {
