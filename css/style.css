@@ -78,7 +78,7 @@ body {
 }
 
 .boton--sin-fondo:hover {
-  background: #ccc;
+  background: rgb(229, 229, 255);
 }
 
 .resultado {
