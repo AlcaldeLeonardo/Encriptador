@@ -1,0 +1,243 @@
+body {
+    background-color: #f3f5fc;
+    color: #0a3871;
+    font-family: "Inter", sans-serif;
+}
+.contenido {
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.encriptando {
+    padding: 10px;
+    height: 600px;
+    width: 100%;
+}
+
+.logo {
+    height: 50px;
+}
+
+.encriptacion__exclamacion,
+.encriptacion__advertencia {
+  display: inline-block;
+  font-size: 12px;
+  vertical-align: middle;
+}
+
+.encriptando__textarea {
+    margin: auto;
+    width: 100%;
+    height: 50%;
+}
+
+.textarea {
+    background: none;
+    padding: 25px;
+    border: none;
+    width: 100%;
+    height: 100%;
+    font-size: 32px;
+    color: #0a3871;
+    resize: none;
+    outline: none;
+}
+
+.resultado .textarea {
+    font-size: 24px;
+    color: #495057;
+}
+
+
+.botones {
+    display: block;
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 24px;
+    background-color: #0A3871;
+    color: #eee;
+    border-radius: 24px;
+    border: none;
+    transition: 150ms;
+}
+
+.botones:hover {
+    background: #082c58;
+  }
+  
+.botones:active {
+    transform: scale(0.95);
+  }
+
+.botones--sin_fondo {
+    background: none;
+    color:#0A3871;
+    border: 1px solid #0A3871;
+}
+
+.botones--sin_fondo:hover {
+    background: rgb(229, 229, 255);
+  }
+
+.resultado {
+    background-color: #fff;
+    width: 100%;
+    padding: 10px;
+    box-shadow: 0px 24px 32px -8px rgba(0, 0, 0, 0.18);
+    border-radius: 32px;
+}
+
+.muestraDesktop {
+    display: none;
+}
+
+.muestrainicial {
+    display: block;
+    position: relative;
+    text-align: center;
+}
+
+.resultado__subtitulo {
+    font-size: 24px;
+    font-weight: 700;
+}
+.resultado__p {
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.resultado__textarea { /*esta debo poner en none*/
+    display: none;
+    margin: auto;
+    width: 100%;
+    height: 50vh;
+}
+
+.resultado .botones{
+    margin-top: 10px;
+
+}
+
+.copiar {
+    display: none;
+}
+
+.rodapie { 
+    background-color:aquamarine;
+}
+
+.contacto {
+    padding-top: 50px;
+    background: linear-gradient(180deg, #0000, #0005);
+    text-align: center;
+  }
+  .contacto__firma {
+    font-size: 16px;
+    margin:0%;
+  }
+  
+  .contacto__redes {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 1em 1em 2em;
+  }
+  
+  .contacto__redes--linkedin {
+    width: 50px;
+  }
+  
+  .contacto__redes--github {
+    width: 55px;
+  }
+
+
+@media screen and  (min-width: 768px) {
+
+    .encriptando {
+        height: 800px;
+    }
+
+    .encriptando__textarea {
+        height: 70%;
+    }
+
+    .encritando__botones {
+        margin: auto;
+    }
+
+    .encriptando .botones {
+        display: inline-block;
+    }
+
+    .botones {
+        width: 46%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .resultado__textarea {
+        height: 50vh;
+    }
+
+    .resultado__botones {
+        margin-top: 10px;
+    }
+    .resultado .botones {
+        margin: auto;
+    }
+
+    .copiar {
+        width: 80%;
+    }
+
+}
+
+
+@media screen and  (min-width: 900px) {
+    .contenido {
+        flex-direction: row;
+    }
+
+    .encriptando {
+        width: 70%;
+        height: 90vh;
+    }
+
+    .encriptando__textarea {
+        height: 70%;
+    }
+
+    .resultado {
+        width: 30%;
+        height: 92vh;
+    }
+
+    .muestraDesktop {
+        display: block;
+        position: relative;
+        top: 20%;
+        width: 100%;
+        margin: auto;
+    }
+
+    .muestrainicial {
+        top: 20%;
+    }
+
+
+
+    .resultado__textarea {
+        display: none;
+        height: calc(95px + 68%);
+    }
+
+    .resultado__botones {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+
+    .copiar {
+        width: 80%;
+    }
+}
