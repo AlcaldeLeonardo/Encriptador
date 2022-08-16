@@ -1,6 +1,8 @@
 var entrada = document.querySelector("#entrada");
 var salida = document.querySelector("#salida");
-var muestra = document.querySelector("#muestra");
+var marco = document.querySelector("#marco");
+var muestra = document.querySelector("#nohaymensaje");
+var muñeco = document.querySelector("#muñeco");
 var validacion = true;
 var botonCopiar = document.querySelector("#botonCopiar")
 
@@ -34,8 +36,9 @@ function encriptar() {
         .replaceAll("a", "ai")
         .replaceAll("u", "ufat");
     salida.value = mensajeEncriptado;
-    salida.style.display = "inline-block";
+    marco.style.display = "inline-block";
     muestra.style.display = "none";
+    muñeco.style.display = "none";
     botonCopiar.style.display = "block" 
 }
 
@@ -48,10 +51,11 @@ function desencriptar() {
         .replaceAll("ober", "o")
         .replaceAll("ai", "a")
         .replaceAll("ufat", "u");
-    salida.value = mensajeEncriptado;
-    salida.style.display = "inline-block";
-    muestra.style.display = "none";
-    botonCopiar.style.display = "block" 
+        salida.value = mensajeEncriptado;
+        marco.style.display = "inline-block";
+        muestra.style.display = "none";
+        muñeco.style.display = "none";
+        botonCopiar.style.display = "block"
 }
 
 function copyToClipBoard() {

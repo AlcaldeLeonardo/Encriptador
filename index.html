@@ -1,39 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="shortcut icon" href="img/Icono.png" />
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
-      rel="stylesheet"
-    />
-    <!---->
-    <link rel="stylesheet" href="css/normalize.css" />
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" href="img/Icono.png" />
     <title>Encriptador</title>
-  </head>
-  <body>
-    <main>
-      
-      <div class="encriptacion">
-        <div class="header">
-          <h1 class="header__logo">
-            <img src="img/Vectorlogo.png" alt="logo del encriptador" />
-          </h1>
-        </div>
-        <form action="#">
-          <textarea
-            class="encriptacion__entrada"
-            name=""
-            id="entrada"
-            placeholder="Ingrese el texto aquí"
-          ></textarea>
+</head>
+<body>
+    <main class="contenido">
 
-          <img
+        <div class="encriptando">
+            <h1 class="logo">
+                <img src="img/Icono.png">
+            </h1>
+            <div class="encriptando__textarea">
+                <textarea id="entrada"class="textarea" placeholder="Ingrese su texto aquí"></textarea>
+
+            </div>
+
+            <img
             class="encriptacion__exclamacion"
             src="img/Vectorexclamacion.png"
             alt="exclamacion"
@@ -42,68 +32,49 @@
             Solo letras minusculas y sin acento
           </p>
 
-          <input
-            onclick="encriptar()"
-            class="boton"
-            type="button"
-            value="Encriptar"
-          />
-          <input
-            onclick="desencriptar()"
-            class="boton boton--sin-fondo"
-            type="button"
-            value="Desencriptar"
-          />
-        </form>
-      </div>
-      <div class="resultado">
-        <div class="nohaymensaje" id="muestra">
-          <img class="nohaymensaje__imagen" src="img/muñeco.png" alt="">
-          <p class="resultado__subtitulo" id="subtituloResultado">
-            Ningun mensaje fue encontrado
-          </p>
-          <p class="resultado__parrafo" id="parrafoResultado">
-            Ingrese el texto que desea encriptar o desencriptar
-          </p>
+            <div class="encriptando__botones">
+                <input onclick="encriptar()" class="botones" type="button" value="Encriptar">
+                <input onclick="desencriptar()" class="botones botones--sin_fondo" type="button" value="Desencriptar">
+            </div>
         </div>
-        <form action="#">
-          <textarea
-          readonly="readonly"
-          class="resultado__salida"
-          name=""
-          id="salida"
-        ></textarea>
-          <p></p>
-        <input
-          onclick="copyToClipBoard()"
-          id="botonCopiar"
-          class="boton boton--sin-fondo copiar"
-          type="button"
-          value="Copiar">
-        </form>
-      </div>
-      <script src="scripts/motor_encriptador.js"></script>
+
+        <div class="resultado">
+            <img class="muestraDesktop" id="muñeco" src="img/muñeco.png" alt="">
+            <div class="muestrainicial" id ="nohaymensaje">
+                <p class="resultado__subtitulo">Ningún mensaje fue encontrado</p>
+                <p class="resultado__p">Ingresa el texto que desea encriptar o desencriptar</p>
+            </div>
+            <div id="marco"class="resultado__textarea">
+                <textarea id="salida"class="textarea"></textarea>
+
+            </div>
+
+            <div class="resultado__botones">
+                <input onclick = "copyToClipBoard()" id= "botonCopiar" class="botones botones--sin_fondo copiar" type="button" value="Copiar">
+            </div>
+        </div>
     </main>
     <footer class="contacto">
-      <p class="contacto__firma">Leonardo Esteban Alcalde Gómez</p>
-      <p class="contacto__redes">
-        <a
-          href="https://www.linkedin.com/in/leonardo-esteban-alcalde-gomez-dvpfs/"
-          target="_blank"
-          ><img
-            class="contacto__redes--linkedin"
-            src="img/linkedin_logo.png"
-            alt="LinkedIn Logo"
-        /></a>
-      </p>
-      <p class="contacto__redes">
-        <a href="https://github.com/AlcaldeLeonardo" target="_blank"
-          ><img
-            class="contacto__redes--github"
-            src="img/github_logo.png"
-            alt="Github Logo"
-        /></a>
-      </p>
-    </footer>
-  </body>
+        <p class="contacto__firma">Hecho por Leonardo Esteban Alcalde Gómez en ONE-Chalenge 1</p>
+        <p class="contacto__redes">
+          <a
+            href="https://www.linkedin.com/in/leonardo-esteban-alcalde-gomez-dvpfs/"
+            target="_blank"
+            ><img
+              class="contacto__redes--linkedin"
+              src="img/linkedin_logo.png"
+              alt="LinkedIn Logo"
+          /></a>
+        </p>
+        <p class="contacto__redes">
+          <a href="https://github.com/AlcaldeLeonardo" target="_blank"
+            ><img
+              class="contacto__redes--github"
+              src="img/github_logo.png"
+              alt="Github Logo"
+          /></a>
+        </p>
+      </footer>
+    <script src="scripts/motor_encriptador.js"></script>
+</body>
 </html>
